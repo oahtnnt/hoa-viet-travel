@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa Việt Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f8e9c9] text-[#4b2f1f] font-sans">
+
+    <!-- Header -->
+    <header class="bg-[#6b4a2a] text-white">
+        <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-md bg-white flex items-center justify-center">
+                    <span class="text-lg font-bold text-[#6b4a2a]">HV</span>
+                </div>
+                <div>
+                    <div class="font-bold">Hoa Việt Travel</div>
+                    <div class="text-xs italic text-[#f3e6d9]">Về làng – “Chạm truyền thống, giữ nét làng”</div>
+                </div>
+            </div>
+            <nav class="space-x-4 text-sm">
+                <a href="#home" class="hover:underline">Trang chủ</a>
+                <a href="#tours-section" class="hover:underline">Tours</a>
+                <a href="#about" class="hover:underline">Về chúng tôi</a>
+                <a href="#news" class="hover:underline">Tin tức</a>
+                <a href="#contact" class="hover:underline">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner / Hero -->
+    <section id="home" class="max-w-6xl mx-auto p-6">
+        <div class="rounded-2xl overflow-hidden shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 flex flex-col justify-center">
+                <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
+                    Về làng — Chạm truyền thống, giữ nét làng
+                </h1>
+                <p class="mt-4 text-lg">
+                    Trải nghiệm văn hoá – làm cùng – ăn cùng – sống cùng người dân ở các làng nghề miền Trung.
+                </p>
+            </div>
+            <div class="relative bg-gray-200 flex items-center justify-center h-64 md:h-auto">
+                <img src="banner.jpg" alt="Banner Hoa Việt Travel" class="w-full h-full object-cover rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours-section" class="max-w-6xl mx-auto p-6">
+        <h2 class="text-2xl font-bold mb-4">The Soul of Craft - Khám phá 4 làng nghề đặc sắc</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Tour Cards -->
+            <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-md p-4">
+                <img src="phuoctich.jpg" alt="Làng cổ Phước Tích" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-semibold">Làng cổ Phước Tích</h3>
+                <p class="text-sm mt-2">Giá: 1.640.000 VND</p>
+                <div class="mt-4 flex gap-2">
+                    <button onclick="openTour('phuoctich')" class="text-sm px-3 py-1 rounded bg-[#f3e6d9] border">Chi
+                        tiết</button>
+                    <button onclick="openBooking('phuoctich')"
+                        class="text-sm px-3 py-1 rounded font-semibold bg-[#d7b96b]">Đặt tour</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-md p-4">
+                <img src="baola.jpg" alt="Làng mây đan Bao La" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-semibold">Làng mây tre đan Bao La</h3>
+                <p class="text-sm mt-2">Giá: 430.000 VND</p>
+                <div class="mt-4 flex gap-2">
+                    <button onclick="openTour('baola')" class="text-sm px-3 py-1 rounded bg-[#f3e6d9] border">Chi
+                        tiết</button>
+                    <button onclick="openBooking('baola')"
+                        class="text-sm px-3 py-1 rounded font-semibold bg-[#d7b96b]">Đặt tour</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-md p-4">
+                <img src="langsinh.jpg" alt="Làng Sình" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-semibold">Làng Sình</h3>
+                <p class="text-sm mt-2">Giá: 410.000 VND</p>
+                <div class="mt-4 flex gap-2">
+                    <button onclick="openTour('lanhsinh')" class="text-sm px-3 py-1 rounded bg-[#f3e6d9] border">Chi
+                        tiết</button>
+                    <button onclick="openBooking('lanhsinh')"
+                        class="text-sm px-3 py-1 rounded font-semibold bg-[#d7b96b]">Đặt tour</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-md p-4">
+                <img src="thanhtien.jpg" alt="Làng hoa giấy Thanh Tiên"
+                    class="w-full h-48 object-cover rounded-lg mb-2">
+                <h3 class="font-semibold">Làng hoa giấy Thanh Tiên</h3>
+                <p class="text-sm mt-2">Giá: 530.000 VND</p>
+                <div class="mt-4 flex gap-2">
+                    <button onclick="openTour('thanhtien')" class="text-sm px-3 py-1 rounded bg-[#f3e6d9] border">Chi
+                        tiết</button>
+                    <button onclick="openBooking('thanhtien')"
+                        class="text-sm px-3 py-1 rounded font-semibold bg-[#d7b96b]">Đặt tour</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="max-w-6xl mx-auto p-6 mt-10">
+        <h2 class="text-2xl font-bold mb-4">Về chúng tôi</h2>
+        <p class="bg-white p-6 rounded-xl shadow">
+            “Về Làng” là dự án du lịch trải nghiệm văn hoá – làng nghề tại miền Trung, mang đến mô hình du lịch đắm chìm
+            nơi du khách làm cùng – ăn cùng – sống cùng người dân địa phương.
+            Dự án kết nối du khách với làng nghề truyền thống thông qua các hoạt động như đan lát, làm gốm, workshop thủ
+            công và lưu trú nhà cổ.
+            Khởi nguồn từ những chuyến đi thực tế đến các làng nghề đang dần mai một, “Về Làng” hướng đến bảo tồn giá
+            trị văn hoá, đồng thời tạo sân chơi trải nghiệm ý nghĩa cho người trẻ. Dự án hiện triển khai tour tại Bao
+            La, Phước Tích, Thanh Tiên và làng Sình, với định hướng mở rộng đến nhiều làng nghề khác trong tương lai.
+            Sứ mệnh của “Về Làng” là đưa du khách trở về với nét đẹp nguyên bản của văn hoá Việt, tạo nên những hành
+            trình chân thật và giàu cảm xúc, đồng thời góp phần phát triển du lịch bền vững và mang lại lợi ích cho cộng
+            đồng địa phương.
+        </p>
+    </section>
+
+    <!-- Tour Detail Popup -->
+    <div id="tourPopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 hidden">
+        <div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] p-6 shadow-lg relative overflow-y-auto">
+
+            <button onclick="closeTour()" class="absolute top-2 right-2 text-gray-500 font-bold">X</button>
+
+            <h3 id="tourTitle" class="text-xl font-bold mb-4"></h3>
+
+            <p id="tourStory" class="mb-4"></p>
+
+            <!-- 4 ảnh ngang -->
+            <div id="tourImageGroup" class="flex overflow-x-auto space-x-2 mb-3"></div>
+
+            <h4 class="text-lg font-semibold mt-2 mb-2">Lịch trình tour</h4>
+
+            <div id="tourSchedule" class="text-sm leading-relaxed"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Booking Popup -->
+    <div id="bookingPopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 hidden">
+        <div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] p-6 shadow-lg relative overflow-y-auto">
+            <button onclick="closeBooking()" class="absolute top-2 right-2 text-gray-500 font-bold">X</button>
+            <h3 class="text-xl font-bold mb-4">Đặt tour</h3>
+            <form id="bookingForm" class="grid gap-3">
+                <input type="text" name="name" placeholder="Họ và tên" required class="w-full p-2 border rounded">
+                <input type="text" name="phone" placeholder="Số điện thoại" required class="w-full p-2 border rounded">
+                <input type="email" name="email" placeholder="Email" required class="w-full p-2 border rounded">
+
+                <!-- Chọn tour -->
+                <select name="tour" id="tourSelect" class="w-full p-2 border rounded">
+                    <option value="baola">Làng mây tre đan Bao La</option>
+                    <option value="phuoctich">Làng cổ Phước Tích</option>
+                    <option value="lanhsinh">Làng Sình</option>
+                    <option value="thanhtien">Làng hoa giấy Thanh Tiên</option>
+                </select>
+
+                <!-- Chọn loại tour -->
+                <select name="tourType" id="tourType" class="w-full p-2 border rounded">
+                    <option value="group">Tour ghép (10-15 khách)</option>
+                    <option value="private">Tour riêng</option>
+                </select>
+
+                <input type="date" name="date" class="w-full p-2 border rounded">
+                <input type="number" name="pax" id="paxInput" placeholder="Số lượng khách" min="1"
+                    class="w-full p-2 border rounded">
+
+                <!-- Giá hiển thị -->
+                <div id="priceInfo" class="p-2 bg-gray-100 rounded text-sm"></div>
+
+                <select name="payment" class="w-full p-2 border rounded">
+                    <option value="bank">Chuyển khoản ngân hàng</option>
+                    <option value="office">Thanh toán tại văn phòng</option>
+                    <option value="vnpay">VNPAY / MoMo</option>
+                </select>
+                <button type="submit" class="px-4 py-2 rounded font-semibold bg-[#d7b96b]">Xác nhận</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#6b4a2a] text-white mt-10">
+        <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h4 class="font-bold mb-2">Hoa Việt Travel</h4>
+                <p>15 Chu Văn An, phường Thuận Hóa, TP Huế</p>
+                <p>Email: hoavietcompany@gmail.com</p>
+                <p>Hotline: 0357706704</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-2">Mạng xã hội</h4>
+                <p>Facebook | Instagram | YouTube</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-2">Liên kết nhanh</h4>
+                <p>Trang chủ | Tours | Về chúng tôi | Tin tức | Liên hệ</p>
+            </div>
+        </div>
+        <div class="text-center p-4 bg-[#4b2f1f]">© 2025 Hoa Việt Travel</div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const tours = {
+            phuoctich: {
+                name: "Làng cổ Phước Tích",
+                story: "Phước Tích là làng cổ nằm bên bờ sông Hương, nổi tiếng với kiến trúc nhà cổ hàng trăm năm tuổi và những giá trị văn hóa truyền thống còn lưu giữ. Dạo quanh làng, bạn sẽ thấy những ngôi nhà mái ngói rêu phong, con đường lát gạch đỏ, và nghe những câu chuyện lịch sử được người dân truyền lại qua nhiều thế hệ. Tour Phước Tích giúp du khách trải nghiệm nghề thủ công truyền thống, thưởng thức ẩm thực Huế đậm đà, và cảm nhận nhịp sống chậm rãi, thanh bình của làng quê xưa.",
+                schedule: `<b>Ngày 1</b><br>
+                            • 7:00–7:30: Đón khách tại khách sạn<br>
+                            • 8:30–11:30: Tham quan làng<br>
+                            • 13:00–16:00: Workshop làm gốm<br>
+                            • 16:00–18:00: Nghỉ ngơi, check-in, tự do tham quan quanh làng<br>
+                            • 18:30–20:00: Ăn tối và trải nghiệm văn hóa tại nhà dân<br>
+                            • 20:00: Nghỉ đêm tại nhà dân<br><br>
+
+                            <b>Ngày 2</b><br>
+                            • 6:30–7:30: Ăn sáng tại nhà dân<br>
+                            • 7:30–10:30: Hoạt động trải nghiệm buổi sáng, dạo làng, chụp ảnh<br>
+                            • 10:30–11:00: Khởi hành về Huế<br>
+                            • 11:30–12:00: Kết thúc hành trình`,
+                images: [
+                    "phuoctich1.jpg",
+                    "phuoctich2.jpg",
+                    "phuoctich3.jpg",
+                    "phuoctich4.jpg"
+                ]
+            },
+            baola: {
+                name: "Làng mây tre đan Bao La",
+                story: "Làng Bao La là điểm đến của những sản phẩm mây tre đan tinh xảo, từ giỏ, nón, đến đồ trang trí. Nghề mây tre đan đã được truyền lại từ nhiều thế hệ, nơi bàn tay khéo léo của người thợ biến những vật liệu giản dị thành tác phẩm nghệ thuật. Khi tham gia tour, du khách sẽ được trải nghiệm tự tay đan các sản phẩm, tìm hiểu kỹ thuật tạo hình, và cảm nhận sự kiên nhẫn, tỉ mỉ trong từng đường nét.",
+                schedule: "7:00–7:30: Đón khách<br>8:30–11:30: Tham quan làng Bao La, xem quy trình mây tre đan, trò chuyện cùng người dân<br>11:30 – 12:30: Ăn trưa tại nhà dân<br>13:00 – 14:30: Workshop làm sản phẩm mây tre đan<br>14:30 – 15:30: Tham quan tự do, chụp ảnh<br>15:30 – 16:00:Kết thúc hành trình"
+            },
+            lanhsinh: {
+                name: "Làng Sình",
+                story: "Làng Sình, nằm ven sông Hương ở Huế, nổi tiếng với nghề làm tranh truyền thống. Nghệ nhân nơi đây vẫn gìn giữ kỹ thuật vẽ tranh tinh xảo bằng các chất liệu tự nhiên, tạo nên những tác phẩm mang đậm vẻ đẹp mộc mạc và văn hóa Huế. Khi đến thăm làng, du khách có thể chiêm ngưỡng những bức tranh độc đáo, tìm hiểu quy trình chế tác truyền thống, và thậm chí tự tay trải nghiệm làm tranh, cảm nhận nhịp sống yên bình của làng quê và tâm hồn nghệ thuật của người dân địa phương.",
+                schedule: "7:00–7:30: Đón khách<br>8:30–11:30: Tham quan làng Sình, xem quy trình làm tranh và trò chuyện cùng nghệ nhân<br>11:30 – 12:30: Ăn trưa tại nhà dân<br>13:00 – 14:30: Workshop làm tranh<br>14:30 – 15:30: Tham quan tự do<br>15:30 – 16:00: Đưa khách về điểm đón"
+            },
+            thanhtien: {
+                name: "Làng hoa giấy Thanh Tiên",
+                story: "Làng hoa giấy Thanh Tiên nổi tiếng với những bông hoa giấy đủ màu sắc, sống động như hoa thật. Nghề làm hoa giấy là sự kết hợp giữa nghệ thuật và thủ công, từ chọn giấy, nhuộm màu, tạo cánh hoa cho đến ghép thành từng bó. Tham gia tour Thanh Tiên, du khách sẽ được học cách làm một bông hoa giấy, khám phá sự sáng tạo và tỉ mỉ trong từng chi tiết, đồng thời tận hưởng không khí yên bình của làng quê.",
+                schedule: "7:00–7:30: Đón khách<br>8:30–11:30: Tham quan làng Thanh Tiên, xem quá trình làm hoa giấy, trò chuyện cùng nghệ nhân<br>11:30 – 12:30: Ăn trưa tại nhà dân<br>13:00 – 14:30: Workshop làm hoa giấy<br>14:30 – 15:30: Tham quan tự do<br>15:30 – 16:00: Đưa khách về điểm đón"
+            }
+        };
+
+        // Giá tour
+        const tourPrices = {
+            baola: { "1-5": 516000, "5-10": 473000, "10-15": 430000 },
+            phuoctich: { "1-5": 1968000, "5-10": 1804000, "10-15": 1640000 },
+            lanhsinh: { "1-5": 492000, "5-10": 451000, "10-15": 410000 },
+            thanhtien: { "1-5": 636000, "5-10": 583000, "10-15": 530000 }
+        };
+
+        function openTour(id) {
+            const tour = tours[id];
+
+            document.getElementById("tourTitle").textContent = tours[id].name;
+            document.getElementById("tourStory").textContent = tours[id].story;
+            document.getElementById("tourSchedule").innerHTML = tours[id].schedule;
+
+            const imgGroup = document.getElementById("tourImageGroup");
+            imgGroup.innerHTML = ""; // xóa ảnh cũ nếu có
+            if (tour.images && tour.images.length > 0) {
+                imgGroup.classList.remove("hidden");
+                tour.images.forEach(src => {
+                    const img = document.createElement("img");
+                    img.src = src;
+                    img.className = "h-60 object-cover rounded";
+                    imgGroup.appendChild(img);
+                });
+            } else {
+                imgGroup.classList.add("hidden");
+            }
+            document.getElementById("tourPopup").classList.remove("hidden");
+        }
+
+        function closeTour() {
+            document.getElementById("tourPopup").classList.add("hidden");
+        }
+
+        // Cập nhật giá khi thay đổi tour, loại tour hoặc số lượng khách
+        function updatePrice() {
+            const tourId = document.getElementById("tourSelect").value;
+            const type = document.getElementById("tourType").value;
+            const pax = parseInt(document.getElementById("paxInput").value) || 1;
+
+            let priceText = "";
+
+            if (type === "group") {
+                priceText = "Giá tour ghép (10-15 khách): " + tourPrices[tourId]["10-15"].toLocaleString() + " đồng/khách";
+            } else { // private tour
+                if (pax <= 5) priceText = "Số lượng " + pax + " khách: " + tourPrices[tourId]["1-5"].toLocaleString() + " đồng/khách";
+                else if (pax <= 10) priceText = "Số lượng " + pax + " khách: " + tourPrices[tourId]["5-10"].toLocaleString() + " đồng/khách";
+                else priceText = "Số lượng " + pax + " khách: " + tourPrices[tourId]["10-15"].toLocaleString() + " đồng/khách";
+            }
+
+            document.getElementById("priceInfo").textContent = priceText;
+        }
+
+        function openBooking(id) {
+            document.getElementById("bookingPopup").classList.remove("hidden");
+            document.getElementById("tourSelect").value = id;
+            updatePrice();
+        }
+
+        function closeBooking() {
+            document.getElementById("bookingPopup").classList.add("hidden");
+        }
+
+        // Khởi tạo khi trang load xong
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lắng nghe thay đổi
+            document.getElementById("tourSelect").addEventListener("change", updatePrice);
+            document.getElementById("tourType").addEventListener("change", updatePrice);
+            document.getElementById("paxInput").addEventListener("input", updatePrice);
+
+            document.getElementById("bookingForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+                alert("Đặt tour thành công! Chúng tôi sẽ liên hệ bạn sớm.");
+                closeBooking();
+                this.reset();
+                updatePrice();
+            });
+            updatePrice();
+        });
+    </script>
+
+</body>
+
+</html>
